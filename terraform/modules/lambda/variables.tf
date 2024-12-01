@@ -35,3 +35,9 @@ variable "s3_bucket_name" {
   default     = null
   description = "The S3 bucket name for storing aggregated data (optional)"
 }
+
+variable "sqs_queue_arn" {
+  description = "The ARN of the SQS queue to trigger the worker Lambda."
+  type        = string
+  default     = null
+}

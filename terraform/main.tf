@@ -31,6 +31,7 @@ module "lambda_worker" {
   function_name     = "worker_lambda"
   role_arn          = module.iam.lambda_role_arn
   sqs_queue_url     = module.sqs.sqs_queue_url
+  sqs_queue_arn     = module.sqs.sqs_queue_arn
   lambda_zip_path   = "../lambdas/deployment/worker.zip"
   dynamo_table_name = module.dynamodb.dynamo_table_name
 }
