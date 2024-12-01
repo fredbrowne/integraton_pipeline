@@ -1,0 +1,1 @@
+from .control_table import DynamoDBControlTable

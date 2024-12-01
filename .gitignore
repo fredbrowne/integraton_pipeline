@@ -1,0 +1,58 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual environment
+.venv/
+env/
+venv/
+
+# Lambda deployment artifacts
+lambdas/deployment/
+*.zip
+
+# Logs and debug files
+*.log
+*.out
+*.err
+
+# AWS CLI credentials and config
+.aws/
+
+# Terraform state files
+terraform.tfstate
+terraform.tfstate.*
+*.tfstate.backup
+.terraform/
+.terraform.lock.hcl
+
+# Pytest cache and test artifacts
+.pytest_cache/
+.cache/
+*.coverage
+coverage.xml
+htmlcov/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Editor and IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Python build files
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Node modules (if applicable)
+node_modules/
+
+# Other unwanted files
+*.bak
+*.tmp
