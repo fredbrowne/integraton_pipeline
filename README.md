@@ -36,7 +36,7 @@ flowchart TD
     end
 
     subgraph Data_Processing
-        SQS_Main -->|Trigger worker| Lambda_Worker[AWS Lambda: Processes Each Batch]
+        SQS_Main -->|Trigger worker via event source mapping| Lambda_Worker[AWS Lambda: Processes Each Batch]
         Lambda_Worker -->|Fetch from external API| Data_Provider_API[External API]
         Data_Provider_API -->|Success| DynamoDB_Control[Amazon DynamoDB: Stores Enriched Data]
         Data_Provider_API -->|Error| SQS_DLQ[Amazon SQS DLQ: Logs Failed Batches]
@@ -260,7 +260,7 @@ routes = {
 
 ---
 
-## Authors
+## Author
 
 Developed by Fred Browne.
 
